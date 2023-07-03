@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisição e repostas via API</title>
+</head>
+
+<body>
+    <h1>Requisição e repostas via API</h1>
+    <button type="button" id="btnFetch">Fetch</button>
+    <div id="resposta"></div>
+
+    <script>
+        const requisicao = new Request('http://localhost:3000/Produtos', {
+            method: 'GET',
+            headers: {
+                'Content-type': 'application/json'
+            }
+        });
+
+        document.querySelector('#btnFetch').addEventListener('click',()=>{
+
+        fetch(requisicao)
+            .then(resposta => resposta.json())
+            // .then(resposta => JSON.stringify(resposta))
+            // .then (resposta=> JSON.parse(resposta))
+            .then(resposta => {
+                const produto=`
+                <p>ID: ${resposta.id}</p>
+                <p>Descrição: ${resposta.descricao}</p>
+                <p>Preço: ${resposta.preco}</p>
+                `
+                document.querySelector('#resposta').innerHTML = produto;
+                
+            });
+        })
+    </script>
+</body>
+
+</html>
