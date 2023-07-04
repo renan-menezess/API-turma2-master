@@ -1,8 +1,21 @@
 {
-    "Produtos":
+    "Produtos": [
         {
-            "id":1,
+            "id": 1,
             "descricao": "sapato 1",
             "preco":"19.90" 
-        }   
+        },
+        {
+            "id": 2,
+            "descricao": "Sandália Branca",
+            "preco": "29.90"
+        },
+        {
+            "id": 3,
+            "descricao": "Chinelo Bege",
+            "preco": "9.90"
+        }  
+
+    ]
+         
 }
