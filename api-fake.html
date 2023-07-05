@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação com APIs</title>
+</head>
+<body>
+    <h1>Interação com APIs</h1>
+    <h2>Requisição e Resposta</h2>
+    <div>
+        <p>
+            <span>DENTRO</span>
+        </p>
+        <span>IRMAO P</span>
+    </div>
+    <span>FORA</span>
+
+    <div id="caixa"></div>
+    
+    <script>
+        document.querySelector('div + span').innerHTML = 'fora';
+        document.querySelector('div + span').setAttribute('id', 'fora');
+        document.querySelector('div + span').classList.add('fora');
+
+        const p = document.createElement('p');
+        p.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque enim error dolor, natus officiis sunt amet explicabo molestiae repudiandae iste.';
+        
+        document.querySelector('#caixa').appendChild(p);
+
+    </script>
+</body>
+</html>
