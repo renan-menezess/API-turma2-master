@@ -1,103 +1,10 @@
 {
-  "Produtos": [
+  "produtos": [
     {
       "id": 1,
-      "descricao": "sapato 1",
-      "preco": "19.90"
-    },
-    {
-      "id": 2,
-      "descricao": "Sandália Branca",
-      "preco": "29.90"
-    },
-    {
-      "id": 3,
-      "descricao": "Chinelo Bege",
-      "preco": "9.90"
-    },
-    {
-      "id": 4,
-      "descricao": "BRASIL",
-      "preco": "15",
-      "imagem": "poa.webp"
-    },
-    {
-      "id": 5,
-      "descricao": "BRASIL",
-      "preco": "15",
-      "imagem": "poa.webp"
-    },
-    {
-      "id": 6,
-      "descricao": "POA",
-      "preco": "20",
-      "imagem": "poai.webp"
-    },
-    {
-      "id": 7,
-      "descricao": "POA",
-      "preco": "20",
-      "imagem": "poai.webp"
-    },
-    {
-      "id": 8,
-      "descricao": "CHAPEU",
-      "preco": "20",
-      "imagem": "poai.webp"
-    },
-    {
-      "id": 9,
-      "descricao": "CHAPEU",
-      "preco": "20",
-      "imagem": "poai.webp"
-    },
-    {
-      "id": 10,
-      "descricao": "CHAPEU",
-      "preco": "20",
-      "imagem": "poai.webp"
-    },
-    {
-      "id": 11,
-      "descricao": "CHAPEU",
-      "preco": "20",
-      "imagem": "poai.webp"
-    },
-    {
-      "id": 12,
-      "descricao": "CHAPEU",
-      "preco": "20",
-      "imagem": "poai.webp"
-    },
-    {
-      "id": 13,
-      "descricao": "CHAPEU",
-      "preco": "20",
-      "imagem": "poai.webp"
-    },
-    {
-      "id": 14,
-      "descricao": "CHAPEU",
-      "preco": "20",
-      "imagem": "poai.webp"
-    },
-    {
-      "id": 15,
-      "descricao": "CHAPEU",
-      "preco": "20",
-      "imagem": "poai.webp"
-    },
-    {
-      "id": 16,
-      "descricao": "CHAPEU",
-      "preco": "20",
-      "imagem": "poai.webp"
-    },
-    {
-      "id": 17,
-      "descricao": "CHAPEU",
-      "preco": "20",
-      "imagem": "poai.webp"
+      "descricao": "Sapato polo",
+      "preco": "25.30",
+      "imagem": "./assests/imagem/produtos.webp"
     }
   ]
 }

@@ -1,0 +1,24 @@
+:root {
+    --main-color: #0000;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+li {
+    margin: 10px;
+    background-color: var(--main-color) ;
+}
+
+form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 5px 100px;
+    margin-top: 80px;
+}
