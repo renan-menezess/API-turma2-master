@@ -2,8 +2,8 @@
   "produtos": [
     {
       "id": 1,
-      "descricao": "Sapato polo",
-      "preco": "25.30",
+      "descricao": "Sapato Brasileiro",
+      "preco": "20.30",
       "imagem": "./assests/imagem/produtos.webp"
     }
   ]

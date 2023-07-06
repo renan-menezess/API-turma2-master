@@ -27,10 +27,10 @@
     <div id="listaProdutos"></div>
 
     <script>
-        document.querySelector('#btnAtualizar').addEventListener('click',
-        () => {
+        document.querySelector('#btnAtualizar').addEventListener('click', () => {
 
             const id = document.querySelector('#id').value;
+
             const dados = {
                 'id': null,
                 'descricao': document.querySelector('#descricao').value,
@@ -38,7 +38,7 @@
                 'imagem': document.querySelector('#imagem').value
             };
 
-            fetch(`http://localhost:3000/produtos/$(id)`, {
+            fetch(`http://localhost:3000/produtos/${id}`, {
                 method: 'PUT', 
                 headers: {
                     'Content-type': 'application/json'
@@ -47,8 +47,7 @@
             })
                 .then(response => {
                     if (response.ok) {
-                        document.querySelector('#resposta').innerHTML = 
-                            'Produto atualizado!'
+                        document.querySelector('#resposta').innerHTML = 'Produto atualizado!';
                     }
                 })
 
@@ -57,13 +56,12 @@
         });
 
         function getProdutos() {
-            const requisicao = new Request('http://localhost:3000/produtos', {
+            fetch('http://localhost:3000/produtos', {
             method: 'GET',
             headers: {
                 'Content-type': 'application/json'
             }
         })
-
             .then(resposta => resposta.json())
             .then(resposta => {
 
