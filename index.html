@@ -37,6 +37,7 @@
                     <li>ID: ${resposta[i].id}</li>
                     <li>Descrição: ${resposta[i].descricao}</li>
                     <li>Preço: ${resposta[i].preco}</li>
+                    <li><img src=${resposta[i].imagem}></li>
                     `
                     
                     document.querySelector('#resposta').appendChild(ul).innerHTML = produto;
