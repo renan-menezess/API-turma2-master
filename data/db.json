@@ -1,12 +1,6 @@
 {
   "produtos": [
     {
-      "id": 1,
-      "descricao": "Sapato Bola",
-      "preco": "30.10",
-      "imagem": "./assets/imagem/produtos.webp"
-    },
-    {
       "id": 2,
       "descricao": "Sapato Brasileiro ",
       "preco": "50.00",

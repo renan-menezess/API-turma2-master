@@ -20,6 +20,8 @@ function getProdutos() {
         for(let i = 0; i < resposta.length; i++) {
 
             const ul = document.createElement("ul");
+            ul.classList.add('produto');
+
             const img = document.createElement('img');
             img.setAttribute('height', '50');
 
@@ -33,5 +35,3 @@ function getProdutos() {
         }
     });
 }
-
-getProdutos();

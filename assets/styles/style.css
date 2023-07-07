@@ -1,24 +1,64 @@
 :root {
-    --main-color: #0000;
+    --main-color: #000000;
+    --sub-color: #c0c0c0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+/* DELETE-COM-DELETE*/
+
+.produto {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+
+div#listaProdutos {
+    border-style: outset;
+}
+
+.botao-delete {
+    border-style: outset;
+    background-color: var(--sub-color);
+}
+
+/* INDEX*/
+
+div#listaProdutos {
+    border-style: outset;
+}
+
+/*CREATE-COM-POST*/
+
+form {
+    display: flex;
+    justify-content: center;
+    box-sizing: content-box;
+    align-items: center;
+}
+
+input {
+    margin: 10px;
+}
+
+#btnCadastrar {
+    border-style: solid;
+    margin: 10px;
 }
 
 ul {
     display: flex;
     list-style: none;
-}
-
-li {
-    margin: 10px;
-    background-color: var(--main-color) ;
-}
-
-form {
-    position: relative;
-    display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 50%;
-    height: 100%;
-    padding: 5px 100px;
-    margin-top: 80px;
+    margin: 0;
+}
+
+div#listaProdutos {
+    border-style: outset;
 }
