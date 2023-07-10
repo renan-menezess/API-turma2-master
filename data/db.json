@@ -1,9 +1,27 @@
 {
   "produtos": [
     {
+      "id": 1,
+      "descricao": "POLO",
+      "preco": "23.3",
+      "imagem": "./assets/imagem/produtos.webp"
+    },
+    {
       "id": 2,
-      "descricao": "Sapato Brasileiro ",
-      "preco": "50.00",
+      "descricao": "Sapato Belga",
+      "preco": "10.50",
+      "imagem": "./assets/imagem/produtos.webp"
+    },
+    {
+      "id": 3,
+      "descricao": "Sapato Brasileiro",
+      "preco": "100.00",
+      "imagem": "./assets/imagem/produtos.webp"
+    },
+    {
+      "id": 4,
+      "descricao": "Sapato Cuiabano",
+      "preco": "45.00",
       "imagem": "./assets/imagem/produtos.webp"
     }
   ]

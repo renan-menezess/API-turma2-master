@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação com APIs | Update com PUT</title>
+</head>
+
+<body>
+    <header>
+        <a href="./">Home</a>
+        <h1>Update com PUT</h1>
+    </header>
+
+    <div id="resposta"></div>
+    
+    <form action="" method="post">
+        <label for="id">ID:</label>
+        <input type="text" id="id"><br>
+
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao"><br>
+
+        <label for="preco">Preço:</label>
+        <input type="text" id="preco"><br>
+
+        <label for="imagem">Imagem:</label>
+        <input type="text" id="imagem"><br>
+
+        <button type="button" id="btnAtualizar">Atualizar</button>
+        <button onclick="limparDados()" type="button" id="btnLimpar">Limpar</button>
+    </form>
+
+    <div id="listaProdutos"></div>
+
+    <script src="./assets/scripts/scripts.js"></script>
+    
+    <script>
+
+            function limparDados(){
+                const id = document.querySelector('#id');
+                const descricao = document.querySelector('#descricao');
+                const preco = document.querySelector('#preco');
+                const imagem = document.querySelector('#imagem');
+                id.value = '';
+                descricao.value = '';
+                preco.value = '';
+                imagem.value = '';
+            }
+
+                document.getElementById("btnAtualizar").disabled = true;
+
+                document.getElementById("id").addEventListener("input", 
+                function (event){
+
+                const id = document.getElementById("id").value;
+                
+                if (id !== null && id !== '') {
+                document.getElementById("btnAtualizar").disabled = false;
+                } else {
+                    document.getElementById("btnAtualizar").disabled = true;
+                }
+            });
+            
+        document.querySelector('#btnAtualizar').addEventListener('click', () => {
+            
+            const id = document.querySelector('#id').value;
+
+            document.getElementById("btnAtualizar").disabled = true;
+
+            document.getElementById("id").addEventListener("input", 
+                function (event){
+
+                const id = document.getElementById("id").value;
+                
+                if (id !== null && id !== '') {
+                    document.getElementById("btnAtualizar").disabled = false;
+                } else {
+                    document.getElementById("btnAtualizar").disabled = true;
+                }
+            });
+
+            const dados = {
+                'id': null,
+                'descricao': document.querySelector('#descricao').value,
+                'preco': document.querySelector('#preco').value,
+                'imagem': document.querySelector('#imagem').value
+            };
+
+            fetch(`http://localhost:3000/produtos/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(dados)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        document.querySelector('#resposta').innerHTML = 'Produto atualizado!';
+                    }
+                })
+    
+                getProdutos();
+            });
+
+        getProdutos();
+    </script>
+</body>
+
+</html>
