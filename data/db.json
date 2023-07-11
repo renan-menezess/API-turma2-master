@@ -2,9 +2,9 @@
   "produtos": [
     {
       "id": 1,
-      "descricao": "POLO",
-      "preco": "23.3",
-      "imagem": "./assets/imagem/produtos.webp"
+      "descricao": "Sapato",
+      "preco": "122",
+      "imagem": "../assets/imagem/produtos.webp"
     },
     {
       "id": 2,

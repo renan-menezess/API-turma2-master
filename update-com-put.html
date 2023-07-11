@@ -29,7 +29,7 @@
         <input type="text" id="imagem"><br>
 
         <button type="button" id="btnAtualizar">Atualizar</button>
-        <button onclick="limparDados()" type="button" id="btnLimpar">Limpar</button>
+        <button type="reset" id="btnLimpar" disabled >Limpar</button>
     </form>
 
     <div id="listaProdutos"></div>
@@ -37,18 +37,65 @@
     <script src="./assets/scripts/scripts.js"></script>
     
     <script>
+            //DESAFIO 1
+            document.addEventListener('click', event => {
+
+                if (event.target.classList.contains('produto')) {
+                    
+                    const elementoBase = event.target;
+
+                    document.querySelector('input#id').value = elementoBase.querySelector('[data-produto="id"]').innerHTML;
+
+                    document.querySelector('input#descricao').value = elementoBase.querySelector('[data-produto="descricao"]').innerHTML;
+
+                    document.querySelector('input#preco').value = elementoBase.querySelector('[data-produto="preco"]').innerHTML;
+
+                    document.querySelector('input#imagem').value = elementoBase.querySelector('[data-produto="imagem"]').getAttribute('src').split("imagem/").pop();
+
+                    limparDados();//checaInputs(); //DESAFIO 2
+                }
+
+            })
+
+            // function checaInputs(){
+
+            //     // const idPreenchido = document.querySelector('input#id').value !== "";
+            //     // const descricaoPreenchido = document.querySelector('input#descricao').value !== "";
+            //     // const precoPreenchido = document.querySelector('input#preco').value !== "";
+            //     // const imagemPreenchida = document.querySelector('input#imagem').value !== "";
+
+            //     if (descricaoPreenchida || precoPreenchido || imagemPreenchida || idPreenchido){
+            //         document.querySelector('button#reset').removeAttribute('disabled');
+
+            //         document.querySelector('button#btnAtualizar').removeAttribute('disabled');
+            //     }
+
+            // }
 
             function limparDados(){
-                const id = document.querySelector('#id');
-                const descricao = document.querySelector('#descricao');
-                const preco = document.querySelector('#preco');
-                const imagem = document.querySelector('#imagem');
+                const id = document.querySelector('input#id');
+                const descricao = document.querySelector('input#descricao');
+                const preco = document.querySelector('input#preco');
+                const imagem = document.querySelector('input#imagem');
                 id.value = '';
                 descricao.value = '';
                 preco.value = '';
                 imagem.value = '';
             }
 
+                const id = document.getElementById("id").value;
+                const descricao = document.getElementById("descricao").value;
+                const preco = document.getElementById("preco").value;
+                const imagem = document.getElementById("imagem").value;
+
+                if ( id || descricao || preco || imagem ) {
+                document.getElementById("btnLimpar").disabled = false;
+                } else {
+                    document.getElementById("btnLimpar").disabled = true;
+                }
+
+            //DESAFIO 3
+            
                 document.getElementById("btnAtualizar").disabled = true;
 
                 document.getElementById("id").addEventListener("input", 
@@ -63,14 +110,13 @@
                 }
             });
             
-        document.querySelector('#btnAtualizar').addEventListener('click', () => {
+            document.querySelector('#btnAtualizar').addEventListener('click', () => {
             
-            const id = document.querySelector('#id').value;
+                const id = document.querySelector('#id').value;
 
-            document.getElementById("btnAtualizar").disabled = true;
+                document.getElementById("btnAtualizar").disabled = true;
 
-            document.getElementById("id").addEventListener("input", 
-                function (event){
+                document.getElementById("id").addEventListener("input", function (event){
 
                 const id = document.getElementById("id").value;
                 
@@ -78,6 +124,22 @@
                     document.getElementById("btnAtualizar").disabled = false;
                 } else {
                     document.getElementById("btnAtualizar").disabled = true;
+                }
+            });
+
+            document.getElementById("btnLimpar").disabled = true;
+
+            document.getElementById("id", "descricao", "preco", "imagem").addEventListener("input", function (event){
+
+                const id = document.getElementById("id").value;
+                const descricao = document.getElementById("descricao").value;
+                const preco = document.getElementById("preco").value;
+                const imagem = document.getElementById("imagem").value;
+
+                if ( id, descricao, preco, imagem !== null && id, descricao, preco, imagem !== '') {
+                document.getElementById("btnLimpar").disabled = false;
+                } else {
+                    document.getElementById("btnLimpar").disabled = true;
                 }
             });
 
