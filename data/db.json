@@ -4,25 +4,25 @@
       "id": 1,
       "descricao": "Sapato",
       "preco": "122",
-      "imagem": "../assets/imagem/produtos.webp"
+      "imagem": "produtos.webp"
     },
     {
       "id": 2,
       "descricao": "Sapato Belga",
       "preco": "10.50",
-      "imagem": "./assets/imagem/produtos.webp"
+      "imagem": "produtos.webp"
     },
     {
       "id": 3,
       "descricao": "Sapato Brasileiro",
       "preco": "100.00",
-      "imagem": "./assets/imagem/produtos.webp"
+      "imagem": "produtos.webp"
     },
     {
       "id": 4,
       "descricao": "Sapato Cuiabano",
       "preco": "45.00",
-      "imagem": "./assets/imagem/produtos.webp"
+      "imagem": "produtos.webp"
     }
   ]
 }
