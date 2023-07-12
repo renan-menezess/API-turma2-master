@@ -52,10 +52,44 @@
 
                     document.querySelector('input#imagem').value = elementoBase.querySelector('[data-produto="imagem"]').getAttribute('src').split("imagem/").pop();
 
-                    limparDados();//checaInputs(); //DESAFIO 2
+                    //limparDados();
+                    checaInputs(); //DESAFIO 2
+                }
+            });
+
+            // Desafio 2
+                function checaInputs() {
+
+                // Estas constantes recebem tipo 'boolean'
+                const idPreenchido = document.querySelector('input#id').value !== "";
+                const descricaoPreenchida = document.querySelector('input#descricao').value !== "";
+                const precoPreenchido = document.querySelector('input#preco').value !== "";
+                const imagemPreenchida = document.querySelector('input#imagem').value !== "";
+
+                if (descricaoPreenchida || precoPreenchido || imagemPreenchida || idPreenchido) {
+                    document.querySelector('button#reset').removeAttribute('disabled');
+
+                    // Desafio 3
+                    if (idPreenchido) {
+                        document.querySelector('button#btnAtualizar').removeAttribute('disabled');
+                    }
+
+                } else {
+                    document.querySelector('button#reset').setAttribute('disabled', '');
+                    document.querySelector('button#btnAtualizar').setAttribute('disabled', '');
+                }
                 }
 
-            })
+                // Complemento desafio 2
+                document.querySelector('form').addEventListener('reset', () => {
+                document.querySelector('#reset').setAttribute('disabled', '');
+                document.querySelector('#btnAtualizar').setAttribute('disabled', '');
+                });
+
+                //Complemento desafio 3
+                document.addEventListener('keyup', () => {
+                checaInputs();
+                });
 
             // function checaInputs(){
 
@@ -72,76 +106,80 @@
 
             // }
 
-            function limparDados(){
-                const id = document.querySelector('input#id');
-                const descricao = document.querySelector('input#descricao');
-                const preco = document.querySelector('input#preco');
-                const imagem = document.querySelector('input#imagem');
-                id.value = '';
-                descricao.value = '';
-                preco.value = '';
-                imagem.value = '';
-            }
+            // function limparDados(){
+            //     const id = document.querySelector('input#id');
+            //     const descricao = document.querySelector('input#descricao');
+            //     const preco = document.querySelector('input#preco');
+            //     const imagem = document.querySelector('input#imagem');
+            //     id.value = '';
+            //     descricao.value = '';
+            //     preco.value = '';
+            //     imagem.value = '';
+            // }
 
-                const id = document.getElementById("id").value;
-                const descricao = document.getElementById("descricao").value;
-                const preco = document.getElementById("preco").value;
-                const imagem = document.getElementById("imagem").value;
+            //     const id = document.getElementById("id").value;
+            //     const descricao = document.getElementById("descricao").value;
+            //     const preco = document.getElementById("preco").value;
+            //     const imagem = document.getElementById("imagem").value;
 
-                if ( id || descricao || preco || imagem ) {
-                document.getElementById("btnLimpar").disabled = false;
-                } else {
-                    document.getElementById("btnLimpar").disabled = true;
-                }
+            //     if ( id || descricao || preco || imagem ) {
+            //     document.getElementById("btnLimpar").disabled = false;
+            //     } else {
+            //         document.getElementById("btnLimpar").disabled = true;
+            //     }
 
             //DESAFIO 3
             
-                document.getElementById("btnAtualizar").disabled = true;
+            //     document.getElementById("btnAtualizar").disabled = true;
 
-                document.getElementById("id").addEventListener("input", 
-                function (event){
+            //     document.getElementById("id").addEventListener("input", 
+            //     function (event){
 
-                const id = document.getElementById("id").value;
+            //     const id = document.getElementById("id").value;
                 
-                if (id !== null && id !== '') {
-                document.getElementById("btnAtualizar").disabled = false;
-                } else {
-                    document.getElementById("btnAtualizar").disabled = true;
-                }
-            });
+            //     if (id !== null && id !== '') {
+            //     document.getElementById("btnAtualizar").disabled = false;
+            //     } else {
+            //         document.getElementById("btnAtualizar").disabled = true;
+            //     }
+            // });
             
+            // document.querySelector('#btnAtualizar').addEventListener('click', () => {
+            
+            //     const id = document.querySelector('#id').value;
+
+            //     document.getElementById("btnAtualizar").disabled = true;
+
+            //     document.getElementById("id").addEventListener("input", function (event){
+
+            //     const id = document.getElementById("id").value;
+                
+            //     if (id !== null && id !== '') {
+            //         document.getElementById("btnAtualizar").disabled = false;
+            //     } else {
+            //         document.getElementById("btnAtualizar").disabled = true;
+            //     }
+            // });
+
+            // document.getElementById("btnLimpar").disabled = true;
+
+            // document.getElementById("id", "descricao", "preco", "imagem").addEventListener("input", function (event){
+
+            //     const id = document.getElementById("id").value;
+            //     const descricao = document.getElementById("descricao").value;
+            //     const preco = document.getElementById("preco").value;
+            //     const imagem = document.getElementById("imagem").value;
+
+            //     if ( id, descricao, preco, imagem !== null && id, descricao, preco, imagem !== '') {
+            //     document.getElementById("btnLimpar").disabled = false;
+            //     } else {
+            //         document.getElementById("btnLimpar").disabled = true;
+            //     }
+            // });
+
             document.querySelector('#btnAtualizar').addEventListener('click', () => {
-            
-                const id = document.querySelector('#id').value;
 
-                document.getElementById("btnAtualizar").disabled = true;
-
-                document.getElementById("id").addEventListener("input", function (event){
-
-                const id = document.getElementById("id").value;
-                
-                if (id !== null && id !== '') {
-                    document.getElementById("btnAtualizar").disabled = false;
-                } else {
-                    document.getElementById("btnAtualizar").disabled = true;
-                }
-            });
-
-            document.getElementById("btnLimpar").disabled = true;
-
-            document.getElementById("id", "descricao", "preco", "imagem").addEventListener("input", function (event){
-
-                const id = document.getElementById("id").value;
-                const descricao = document.getElementById("descricao").value;
-                const preco = document.getElementById("preco").value;
-                const imagem = document.getElementById("imagem").value;
-
-                if ( id, descricao, preco, imagem !== null && id, descricao, preco, imagem !== '') {
-                document.getElementById("btnLimpar").disabled = false;
-                } else {
-                    document.getElementById("btnLimpar").disabled = true;
-                }
-            });
+            const id = document.querySelector('#id').value;
 
             const dados = {
                 'id': null,
