@@ -1,6 +1,6 @@
 :root {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 10pt;
+    font-size: 12pt;
 }
 
 /*UPDATE-COM-PUT*/
@@ -21,6 +21,7 @@ header h1 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    padding-left: 0;
 }
 
 h1 {
@@ -30,6 +31,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    padding-left: 5rem;
 }
 
 form {
@@ -40,7 +42,7 @@ form {
     border-radius: 12px;
     background: #FFF;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 59px 0 0 56px;
+    padding: 10px 0 59px 56px;
 }
 
 ::placeholder {
@@ -50,29 +52,61 @@ form {
     font-style: italic;
     font-weight: 400;
     line-height: normal;
+    padding-left: 8px;
 }
 
 .caixa-form {
     display: flex;
     flex-direction: column;
+    padding-left: 2rem;
 }
 
-.id-caixa{
+.label-caixa{
     font-weight: 800;
+    margin-bottom: 5px;
 }
 
-.descricao-caixa{
-    font-weight: 800;
+/* --------------------Botões-------------------------*/
+button#btnAtualizar {
+    margin-top: 1rem;
+    margin-left: 2rem;
 }
 
-.preco-caixa{
-    font-weight: 800;
+#btnAtualizar {
+    width: 167px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #48A4FA;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-.imagem-caixa{
-    font-weight: 800;
+button#reset {
+    margin-left: 1rem;
 }
 
+#reset {
+    width: 118px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #F59999;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #000;
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 /*----------------------PRODUTOS---------------*/
 
 #listaProdutos {
@@ -110,37 +144,7 @@ form {
     background: #FFF1C1;
 }
 
-#btnAtualizar {
-    width: 167px;
-    height: 46px;
-    flex-shrink: 0;
-    border-radius: 4px;
-    background: #48A4FA;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    color: #FFF;
-    text-align: center;
-    font-family: Ubuntu;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
 
-#reset {
-    width: 118px;
-    height: 46px;
-    flex-shrink: 0;
-    border-radius: 4px;
-    background: #F59999;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    color: #000;
-    text-align: center;
-    font-family: Ubuntu;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
 
 li {
     margin: auto;

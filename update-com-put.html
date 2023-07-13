@@ -18,22 +18,22 @@
     <form action="" method="post">
         <h1>Alteração de Produtos</h1>
         <div class="caixa-form">
-            <label for="id" class="id-caixa">ID</label>
+            <label for="id" class="label-caixa">ID</label>
             <input type="text" id="id" placeholder="digite o ID do produto"><br>
         </div>
 
         <div class="caixa-form">
-            <label for="descricao" class="descricao-caixa">Descrição</label>
+            <label for="descricao" class="label-caixa">Descrição</label>
         <input type="text" id="descricao" placeholder="digite a descrição do produto"><br>
         </div>
 
         <div class="caixa-form">
-            <label for="preco" class="preco-caixa">Preço</label>
+            <label for="preco" class="label-caixa">Preço</label>
         <input type="text" id="preco" placeholder="digite o preço do produto"><br>
         </div>
 
         <div class="caixa-form">
-            <label for="imagem" class="imagem-caixa">Imagem</label>
+            <label for="imagem" class="label-caixa">Imagem</label>
         <input type="text" id="imagem" placeholder="digite a imagem do produto"><br>
         </div>
         
@@ -97,6 +97,8 @@
                 // Desafio 3
                 if (idPreenchido) {
                     document.querySelector('button#btnAtualizar').removeAttribute('disabled');
+                } else {
+                    document.querySelector('button#btnAtualizar').setAttribute('disabled', '');
                 }
 
             } else {
