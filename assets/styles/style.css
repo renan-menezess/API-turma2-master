@@ -21,7 +21,7 @@ header h1 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding-left: 0;
+    padding-left: 2.5rem;
 }
 
 h1 {
@@ -72,6 +72,29 @@ button#btnAtualizar {
     margin-left: 2rem;
 }
 
+#btnAtualizar:active {
+    width: 167px;
+    height: 46px;
+    border-radius: 4px;
+    background: #007BED;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+#btnAtualizar:disabled {
+    width: 167px;
+    height: 46px;
+    border-radius: 4px;
+background: #CAE6FF;
+}
+
+#btnAtualizar:houver {
+    width: 167px;
+    height: 46px;
+    border-radius: 4px;
+    background: #007BED;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 #btnAtualizar {
     width: 167px;
     height: 46px;
@@ -90,6 +113,30 @@ button#btnAtualizar {
 
 button#reset {
     margin-left: 1rem;
+}
+
+#reset:active {
+    width: 118px;
+    height: 46px;
+    border-radius: 4px;
+    background: #FF5F5F;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+#reset:disabled {
+    width: 118px;
+    height: 46px;
+    border-radius: 4px;
+    background: #FFE2E2;
+    color: #AEAEAE;
+}
+
+#reset:houver {
+    width: 118px;
+    height: 46px;
+    border-radius: 4px;
+    background: #FF5F5F;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 #reset {
