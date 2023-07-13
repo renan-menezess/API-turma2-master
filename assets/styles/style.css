@@ -84,7 +84,7 @@ button#btnAtualizar {
     width: 167px;
     height: 46px;
     border-radius: 4px;
-background: #CAE6FF;
+    background: #CAE6FF;
 }
 
 #btnAtualizar:houver {
@@ -112,7 +112,7 @@ background: #CAE6FF;
 }
 
 button#reset {
-    margin-left: 1rem;
+    margin-left: 1.4rem;
 }
 
 #reset:active {
@@ -190,8 +190,6 @@ button#reset {
     border-bottom: 1px solid #000;
     background: #FFF1C1;
 }
-
-
 
 li {
     margin: auto;
