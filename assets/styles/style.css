@@ -6,6 +6,9 @@
 /*UPDATE-COM-PUT*/
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #FEFFE4;
 }
 
@@ -13,7 +16,6 @@ body {
 
 header h1 {
     color: #000;
-    text-align: center;
     font-family: Ubuntu;
     font-size: 32px;
     font-style: normal;
@@ -23,7 +25,6 @@ header h1 {
 
 h1 {
     color: #000;
-    text-align: center;
     font-family: Ubuntu;
     font-size: 24px;
     font-style: normal;
@@ -39,7 +40,7 @@ form {
     border-radius: 12px;
     background: #FFF;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    text-align: center;
+    padding: 59px 0 0 56px;
 }
 
 ::placeholder {
@@ -54,44 +55,39 @@ form {
 .caixa-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .id-caixa{
     font-weight: 800;
-    margin-left: 4.2rem;
 }
 
 .descricao-caixa{
     font-weight: 800;
-    margin-left: 4.2rem;
 }
 
 .preco-caixa{
     font-weight: 800;
-    margin-left: 4.2rem;
 }
 
 .imagem-caixa{
     font-weight: 800;
-    margin-left: 4.2rem;
 }
 
 /*----------------------PRODUTOS---------------*/
 
 #listaProdutos {
     display: flex;
-    width: 243px;
     height: 38px;
     flex-direction:column;
     flex-shrink: 0;
     color: #000;
     font-family: Ubuntu;
-    font-size: 15px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     margin: auto;
+    padding: 30px;
 }
 
 #produto-1 {
@@ -137,17 +133,13 @@ form {
     border-radius: 4px;
     background: #F59999;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    color: #FFF;
+    color: #000;
     text-align: center;
     font-family: Ubuntu;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-label {
-    margin: auto;
 }
 
 li {

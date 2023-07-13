@@ -2,6 +2,9 @@
 const style = document.createElement('link');
 style.rel = 'stylesheet';
 style.href = './assets/styles/style.css';
+const reset = document.createElement('link');
+reset.rel = 'stylesheet';
+reset.href = './assets/styles/reset.css';
 
 // Fontes do Google
 const googleapis = document.createElement('link');
@@ -35,7 +38,7 @@ function getProdutos(btnDelete = false) {
         .then(resposta => {
 
             const listaProdutos = document.querySelector('#listaProdutos');
-            listaProdutos.innerHTML = "Lista de Produtos:";
+            listaProdutos.innerHTML = "Lista de Produtos";
             listaProdutos.classList.add('lista-produtos');
 
             for (let i = 0; i < resposta.length; i++) {
@@ -51,18 +54,22 @@ function getProdutos(btnDelete = false) {
                 img.setAttribute('data-produto', 'imagem');
 
                 const liId = document.createElement('li');
+                liId.classList.add('lista-de-produtos');
                 liId.innerHTML = resposta[i].id;
                 liId.setAttribute('data-produto', 'id');
                 
                 const liDescricao = document.createElement('li');
+                liDescricao.classList.add('lista-de-produtos');
                 liDescricao.innerHTML = resposta[i].descricao;
                 liDescricao.setAttribute('data-produto', 'descricao');
                 
                 const liPreco = document.createElement('li');
+                liPreco.classList.add('lista-de-produtos');
                 liPreco.innerHTML = resposta[i].preco;
                 liPreco.setAttribute('data-produto', 'preco');
                 
                 const liImg = document.createElement('li');
+                liImg.classList.add('lista-de-produtos');
                 liImg.appendChild(img);
                 
                 ul.append(liImg, liId, liDescricao, liPreco);
