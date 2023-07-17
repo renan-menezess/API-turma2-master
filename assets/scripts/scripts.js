@@ -50,7 +50,7 @@ function getProdutos(btnDelete = false) {
 
                 const img = document.createElement('img');
                 img.setAttribute('src', `./assets/imagem/${resposta[i].imagem}`);
-                img.setAttribute('height', '50');
+                img.setAttribute('height', '40');
                 img.setAttribute('data-produto', 'imagem');
 
                 const liId = document.createElement('li');

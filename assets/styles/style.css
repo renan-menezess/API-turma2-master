@@ -171,26 +171,6 @@ button#reset {
     padding: 30px;
 }
 
-#produto-1 {
-    border-bottom: 1px solid #000;
-    background: #FFF;
-}
-
-#produto-2 {
-    border-bottom: 1px solid #000;
-    background: #FFF1C1;
-}
-
-#produto-3 {
-    border-bottom: 1px solid #000;
-    background: #FFF;
-}
-
-#produto-4 {
-    border-bottom: 1px solid #000;
-    background: #FFF1C1;
-}
-
 li {
     margin: auto;
 }
@@ -244,6 +224,31 @@ li {
     background: #FFF;
     margin: auto;
     display: flex;
+}
+
+.produto:nth-child(even) {
+    background: #fff;
+}
+
+.produto:nth-child(odd) {
+    background: #fff1c1;
+}
+
+.produto li:nth-child(2) {
+    text-align: start;
+    margin-left: 2.4rem;
+    width: 10rem;
+}
+
+.produto li:nth-child(3) {
+    text-align: start;
+    width: 90%;
+}
+
+.produto li:nth-child(4) {
+    text-align: end;
+    width: 10rem;
+    margin-right: 2.4rem;
 }
 
 /*a {
