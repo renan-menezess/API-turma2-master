@@ -1,6 +1,19 @@
 :root {
     font-family: 'Ubuntu', sans-serif;
     font-size: 12pt;
+    --cor-fundo: #fff;
+    --cor-form:  #fff;
+    --cor-texto: #000;
+    --cor-da-tabela-1: #fff;
+    --cor-da-tabela-2: #fff1c1;
+    
+}
+[data-theme='dark'] {
+    --cor-fundo: #545454;
+    --cor-form:  #3f3f3f;
+    --cor-texto: #fff;
+    --cor-da-tabela-1: #3f3f3f;
+    --cor-da-tabela-2: #fcda6b;
 }
 
 /*UPDATE-COM-PUT*/
@@ -10,12 +23,14 @@ body {
     flex-direction: column;
     align-items: center;
     background: #FEFFE4;
+    background-color: var(--cor-fundo);
+    transition: background .5s;
 }
 
 /*----------------------FORMS---------------*/
 
 header h1 {
-    color: #000;
+    color: var(--cor-texto);
     font-family: Ubuntu;
     font-size: 32px;
     font-style: normal;
@@ -25,7 +40,7 @@ header h1 {
 }
 
 h1 {
-    color: #000;
+    color: var(--cor-texto);
     font-family: Ubuntu;
     font-size: 24px;
     font-style: normal;
@@ -40,7 +55,7 @@ form {
     flex-shrink: 0;
     margin: auto;
     border-radius: 12px;
-    background: #FFF;
+    background: var(--cor-form);
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 10px 0 59px 56px;
 }
@@ -64,6 +79,7 @@ form {
 .label-caixa{
     font-weight: 800;
     margin-bottom: 5px;
+    color: var(--cor-texto);
 }
 
 /* --------------------Botões-------------------------*/
@@ -181,6 +197,10 @@ li {
     margin: auto;
 }
 
+#produto-1 {
+    margin-top: 20px;
+}
+
 #id {
     width: 304px;
     height: 34px;
@@ -233,11 +253,12 @@ li {
 }
 
 .produto:nth-child(even) {
-    background: #fff;
+    background: var(--cor-da-tabela-1);
+    color: var(--cor-texto);
 }
 
 .produto:nth-child(odd) {
-    background: #fff1c1;
+    background: var(--cor-da-tabela-2);
 }
 
 .produto li:nth-child(2) {
@@ -255,6 +276,45 @@ li {
     text-align: end;
     width: 10rem;
     margin-right: 2.4rem;
+}
+
+/* ----------------TEMA CLARO/ESCURO------------------ */
+
+.bts.bts-base {
+    margin: auto;
+    padding: 0;
+    width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid transparent;
+    transition: all .5s;
+}
+
+.bts-base.light {
+    background: #545454;
+}
+
+.bts-base.dark {
+    background: #d9d9d9;
+}
+
+.bts-slider {
+    margin: 5px;
+    padding: 0;
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+.bts-slider.light {
+    background: #d9d9d9;
+    transition: all .5s;
+}
+
+.bts-slider.dark {
+    background: #545454;
+    transform: translateX(50px);
+    transition: all .5s;
 }
 
 /*a {
