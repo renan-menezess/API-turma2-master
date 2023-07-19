@@ -9,7 +9,27 @@
 
 <body>
     <header>
-        <h1 class="titulo-pagina">Read com GET</h1>
+        <nav>
+            <div class="parent-box">
+                <div class="header-link">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./create-com-post.html">Create</a></li>
+                    <li><a href="./delete-com-delete.html">Delete</a></li>
+                    <li><a href="./update-com-put.html">Update</a></li>
+                    <li><a href="./read-com-get.html">Read</a></li>
+                    <div>
+                        <h1 class="texto-tema">Tema do site</h1>
+                    </div>
+                    <div id="btn-slider" class="bts bts-base">
+                        <div class="bts bts-slider"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div>
+           <h1 class="titulo-pagina">Read com GET</h1> 
+        </div>
+        
     </header>
 
     <div class="botoes">
@@ -19,6 +39,8 @@
     <div id="listaProdutos"></div>
 
     <script src="./assets/scripts/styles.js"></script>
+    <script type="module" src="./assets/scripts/update-com-put.js"></script>
+    <script src="./assets/scripts/botao-slider.js"></script>
     
     <script type="module">
         import { getProdutos } from './assets/scripts/read-com-get.js';
