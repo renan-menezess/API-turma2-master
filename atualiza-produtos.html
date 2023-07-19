@@ -6,27 +6,61 @@
     <title>Atualização de produto</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="parent-box">
+                <div class="header-link">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./create-com-post.html">Create</a></li>
+                    <li><a href="./delete-com-delete.html">Delete</a></li>
+                    <li><a href="./update-com-put.html">Atualiza</a></li>
+                    <div>
+                        <h1 class="texto-tema">Tema do site</h1>
+                    </div>
+                    <div id="btn-slider" class="bts bts-base">
+                        <div class="bts bts-slider"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div>
+            <h1></h1> 
+        </div>
+    </header>
+
     <div id="resposta"></div>
 
     <form action="" method="post">
-        <label for="id">ID:</label> 
-        <input type="text" id="id"><br>
+        <h1>Alteração de Produtos</h1>
+        <div class="caixa-form">
+            <label for="id" class="label-caixa" disabled>ID</label>
+            <input type="text" id="id" placeholder="digite o ID do produto"><br>
+        </div>
 
-        <label for="descricao">Descrição:</label>
-        <input type="text" id="descricao"><br>
+        <div class="caixa-form">
+            <label for="descricao" class="label-caixa" disabled>Descrição</label>
+        <input type="text" id="descricao" placeholder="digite a descrição do produto"><br>
+        </div>
 
-        <label for="preco">Preço:</label>
-        <input type="text" id="preco"><br>
+        <div class="caixa-form">
+            <label for="preco" class="label-caixa">Preço</label>
+        <input type="text" id="preco" placeholder="digite o preço do produto"><br>
+        </div>
 
-        <label for="imagem">Imagem:</label>
-        <input type="text" id="imagem"><br>
-
-        <button type="button" id="btnAtualizar">Atualizar</button>
+        <div class="caixa-form">
+            <label for="imagem" class="label-caixa">Imagem</label>
+        <input type="text" id="imagem" placeholder="digite a imagem do produto"><br>
+        </div>
+        
+        <button type="button" id="btnAtualizar" disabled>Atualizar</button>
+        <button type="reset" id="reset" disabled>Cancelar</button>
     </form>
 
     <div id="listaProdutos"></div>
 
-    <script src="./assets/scripts/scripts.js"></script>
+    <script src="./assets/scripts/styles.js"></script>
+    <script type="module" src="./assets/scripts/update-com-put.js"></script>
+    <script src="./assets/scripts/botao-slider.js"></script>
 
     <script>
         document.querySelector('#btnAtualizar').addEventListener('click', () => {

@@ -2,6 +2,7 @@
 const style = document.createElement('link');
 style.rel = 'stylesheet';
 style.href = './assets/styles/style.css';
+
 const reset = document.createElement('link');
 reset.rel = 'stylesheet';
 reset.href = './assets/styles/reset.css';

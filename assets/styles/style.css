@@ -27,6 +27,49 @@ body {
     transition: background .5s;
 }
 
+/* ------------------NAVBAR---------------- */
+
+nav {
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+}
+
+.parent-box {
+    display: flex;
+    padding: 20px 20px 20px 20px;
+}
+
+.header-link {
+    display: flex;
+    font-size: 12pt;
+    gap: 5rem;
+    padding-left: 0;
+    align-items: center;
+    list-style: none;
+}
+
+.header-link a {
+    color: var(--cor-texto);
+    font-weight: 700;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.header-link a:hover {
+    color: #8f8f8f;
+}
+
+.texto-tema {
+    color: var(--cor-texto);
+    font-family: Ubuntu;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 0;
+}
+
 /*----------------------FORMS---------------*/
 
 header h1 {
@@ -46,7 +89,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding-left: 5rem;
+    text-align: center;
 }
 
 form {
