@@ -6,87 +6,62 @@
     <title>Cadastro de produto</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="parent-box">
+                <div class="header-link">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./create-com-post.html">Create</a></li>
+                    <li><a href="./delete-com-delete.html">Delete</a></li>
+                    <li><a href="./update-com-put.html">Update</a></li>
+                    <li><a href="./read-com-get.html">Read</a></li>
+                    <div>
+                        <h1 class="texto-tema">Tema do site</h1>
+                    </div>
+                    <div id="btn-slider" class="bts bts-base">
+                        <div class="bts bts-slider"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div>
+            <h1>Create com POST</h1> 
+        </div>
+    </header>
+
     <div id="resposta"></div>
     
     <form action="" method="post">
-        <label for="id">ID:</label> 
-        <input type="text" id="id" disabled><br>
+        <h1>Alteração de Produtos</h1>
+        <div class="caixa-form">
+            <label for="id" class="label-caixa" disabled>ID</label>
+            <input type="text" id="id" placeholder="digite o ID do produto"><br>
+        </div>
 
-        <label for="descricao">Descrição:</label>
-        <input type="text" id="descricao"><br>
+        <div class="caixa-form">
+            <label for="descricao" class="label-caixa" disabled>Descrição</label>
+        <input type="text" id="descricao" placeholder="digite a descrição do produto"><br>
+        </div>
 
-        <label for="preco">Preço:</label>
-        <input type="text" id="preco"><br>
+        <div class="caixa-form">
+            <label for="preco" class="label-caixa">Preço</label>
+        <input type="text" id="preco" placeholder="digite o preço do produto"><br>
+        </div>
 
-        <label for="imagem">Imagem:</label>
-        <input type="text" id="imagem"><br>
-
-        <button type="button" id="btnCadastrar">Cadastrar</button>
+        <div class="caixa-form">
+            <label for="imagem" class="label-caixa">Imagem</label>
+        <input type="text" id="imagem" placeholder="digite a imagem do produto"><br>
+        </div>
+        
+        <button type="button" id="btnAtualizar" disabled>Atualizar</button>
+        <button type="reset" id="reset" disabled>Cancelar</button>
     </form>
 
     <div id="listaProdutos"></div>
 
-    <script src="./assets/scripts/scripts.js"></script>
+    <script src="./assets/scripts/styles.js"></script>
+    <script type="module" src="./assets/scripts/update-com-put.js"></script>
+    <script src="./assets/scripts/botao-slider.js"></script>
 
-    <script>
-        document.querySelector('#btnCadastrar').addEventListener('click', () => {
-
-            const dados = {
-                'id': null,
-                'descricao': document.querySelector('#descricao').value,
-                'preco': document.querySelector('#preco').value,
-                'imagem': document.querySelector('#imagem').value
-            };
-
-            fetch(`http://localhost:3000/produtos/`, {
-                method: 'POST', 
-                headers: {
-                    'Content-type': 'application/json'
-                },
-                body: JSON.stringify(dados)
-            })
-                .then(response => {
-                    if (response.ok) {
-                        document.querySelector('#resposta').innerHTML = 'Produto Cadastrado!';
-                    }
-                })
-
-                getProdutos();
-
-        });
-
-        function getProdutos() {
-            fetch('http://localhost:3000/produtos', {
-            method: 'GET',
-            headers: {
-                'Content-type': 'application/json'
-            }
-        })
-
-            .then(resposta => resposta.json())
-            .then(resposta => {
-
-                document.querySelector('#listaProdutos').innerHTML = "";
-
-                for(let i = 0; i < resposta.length; i++) {
-
-                    const ul = document.createElement("ul");
-                    const img = document.createElement('img');
-                    img.setAttribute('height', '50');
-
-                    ul.appendChild(document.createElement('li')).innerHTML = resposta[i].id;
-                    ul.appendChild(document.createElement('li')).innerHTML = resposta[i].descricao;
-                    ul.appendChild(document.createElement('li')).innerHTML = resposta[i].preco;
-                    ul.appendChild(document.createElement('li')).appendChild(img).setAttribute('src', resposta[i].imagem);
-
-                    document.querySelector('#listaProdutos').appendChild(ul);
-
-                }
-            });
-        }
-
-        getProdutos();
-    </script>
 </body>
-
 </html>
