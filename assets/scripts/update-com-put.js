@@ -31,30 +31,30 @@ function checaInputs() {
     const imagemPreenchida = document.querySelector('input#imagem').value !== "";
 
     if (descricaoPreenchida || precoPreenchido || imagemPreenchida || idPreenchido) {
-        document.querySelector('button#btCancelar').removeAttribute('disabled');        
+        document.querySelector('button#btnCancelar').removeAttribute('disabled');        
     } else {
-        document.querySelector('button#btCancelar').setAttribute('disabled', '');
+        document.querySelector('button#btnCancelar').setAttribute('disabled', '');
     }
     
     // Desafio 3
     if (idPreenchido) {
-        document.querySelector('button#btAtualizar').removeAttribute('disabled');
+        document.querySelector('button#btnAtualizar').removeAttribute('disabled');
     } else {
-        document.querySelector('button#btAtualizar').setAttribute('disabled', '');
+        document.querySelector('button#btnAtualizar').setAttribute('disabled', '');
     }
 }
 
 // Complemento desafio 2
 document.querySelector('form').addEventListener('reset', () => {
-    document.querySelector('#btCancelar').setAttribute('disabled', '');
-    document.querySelector('#btAtualizar').setAttribute('disabled', '');
+    document.querySelector('#btnCancelar').setAttribute('disabled', '');
+    document.querySelector('#btnAtualizar').setAttribute('disabled', '');
 });
 
 //Complemento desafio 3
 document.addEventListener('input', checaInputs);
 
 // Request com o método PUT
-document.querySelector('#btAtualizar').addEventListener('click', () => {
+document.querySelector('#btnAtualizar').addEventListener('click', () => {
 
     const id = document.querySelector('#id').value;
 
@@ -66,7 +66,7 @@ document.querySelector('#btAtualizar').addEventListener('click', () => {
     };
 
     // Atualiza o produto
-    fetch(`http://localhost:3000/produtos/${id}`, {
+    fetch(`https://json-server-vercel-test-l0knvbzfa-renan-menezess.vercel.app/produtos/${id}`, {
         method: 'PUT',
         headers: {
             'Content-type': 'application/json'
@@ -77,6 +77,8 @@ document.querySelector('#btAtualizar').addEventListener('click', () => {
             if (response.ok) {
                 document.querySelector('#resposta').innerHTML = 'Produto atualizado!';
                 getProdutos();
+            } else {
+                location.reload();
             }
         })
 
