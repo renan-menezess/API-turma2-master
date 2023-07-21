@@ -2,7 +2,6 @@ import { getProdutos } from "./read-com-get.js";
 
 getProdutos();
 
-// Desafio 1
 document.querySelector('#listaProdutos').addEventListener('click', event => {
 
     if (event.target.closest('ul').classList.contains('produto')) {
@@ -17,14 +16,12 @@ document.querySelector('#listaProdutos').addEventListener('click', event => {
 
         document.querySelector('input#imagem').value = elementoBase.querySelector('[data-produto="imagem"]').getAttribute('src').split("images/").pop();
 
-        checaInputs(); // Desafio 2
+        checaInputs(); 
     }
 });
 
-// Desafio 2
 function checaInputs() {
 
-    // Estas constantes recebem tipo 'boolean'
     const idPreenchido = document.querySelector('input#id').value !== "";
     const descricaoPreenchida = document.querySelector('input#descricao').value !== "";
     const precoPreenchido = document.querySelector('input#preco').value !== "";
@@ -36,7 +33,6 @@ function checaInputs() {
         document.querySelector('button#btnCancelar').setAttribute('disabled', '');
     }
     
-    // Desafio 3
     if (idPreenchido) {
         document.querySelector('button#btnAtualizar').removeAttribute('disabled');
     } else {
@@ -44,16 +40,13 @@ function checaInputs() {
     }
 }
 
-// Complemento desafio 2
 document.querySelector('form').addEventListener('reset', () => {
     document.querySelector('#btnCancelar').setAttribute('disabled', '');
     document.querySelector('#btnAtualizar').setAttribute('disabled', '');
 });
 
-//Complemento desafio 3
 document.addEventListener('input', checaInputs);
 
-// Request com o método PUT
 document.querySelector('#btnAtualizar').addEventListener('click', () => {
 
     const id = document.querySelector('#id').value;
@@ -65,7 +58,6 @@ document.querySelector('#btnAtualizar').addEventListener('click', () => {
         'imagem': document.querySelector('#imagem').value
     };
 
-    // Atualiza o produto
     fetch(`https://json-server-vercel-test-l0knvbzfa-renan-menezess.vercel.app/produtos/${id}`, {
         method: 'PUT',
         headers: {

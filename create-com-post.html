@@ -25,39 +25,43 @@
             </div>
         </nav>
         <div>
-            <h1>Create com POST</h1> 
+            <h1 class="titulo-pagina">Create com POST</h1> 
         </div>
     </header>
 
     <div id="resposta"></div>
     
-    <form action="" method="post">
-        <h1>Inserir Produtos</h1>
-        <div class="caixa-form">
-            <label for="id" class="label-caixa" disabled>ID</label>
-            <input type="text" id="id" placeholder="digite o ID do produto"><br>
-        </div>
+    <div class="formulario">
+        <h1 class="titulo-form">Inserir Produtos</h1>
+        <form action="" method="post">
+            
+            <div class="caixa-form">
+                <label for="id" class="disabled">ID</label>
+                <input type="text" id="id" placeholder="digite o ID do produto" disabled>
+            </div>
 
-        <div class="caixa-form">
-            <label for="descricao" class="label-caixa" disabled>Descrição</label>
-        <input type="text" id="descricao" placeholder="digite a descrição do produto"><br>
-        </div>
+            <div class="caixa-form">
+                <label for="descricao">Descrição</label>
+                <input type="text" id="descricao" placeholder="digite a descrição do produto">
+            </div>
 
-        <div class="caixa-form">
-            <label for="preco" class="label-caixa">Preço</label>
-        <input type="text" id="preco" placeholder="digite o preço do produto"><br>
-        </div>
+            <div class="caixa-form">
+                <label for="preco">Preço</label>
+                <input type="text" id="preco" placeholder="digite o preço do produto">
+            </div>
 
-        <div class="caixa-form">
-            <label for="imagem" class="label-caixa">Imagem</label>
-        <input type="text" id="imagem" placeholder="digite a imagem do produto"><br>
-        </div>
-        
-        <button type="button" class="btn-cadastrar" id="btnCadastrar" disabled>Cadastrar</button>
-        <button type="reset" id="reset" disabled>Cancelar</button>
-        
-    </form>
-
+            <div class="caixa-form">
+                <label for="imagem">Imagem</label>
+                <input type="text" id="imagem" placeholder="digite a imagem do produto">
+            </div>
+            
+            <div class="botoes">
+                <button type="button" class="btn-cadastrar" id="btnCadastrar" disabled>Cadastrar</button>
+                <button type="reset" class="btn-cancelar" id="btnCancelar" disabled>Cancelar</button>
+            </div>  
+        </form>
+    </div>
+    
     <div id="listaProdutos"></div>
 
     <script src="./assets/scripts/styles.js"></script>
